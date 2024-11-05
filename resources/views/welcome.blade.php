@@ -19,12 +19,18 @@
 </head>
 
 <body>
-    <div class="m-20">
-        <div>
-            <h5 class="mb-10 text-2xl font-bold text-black">Welcome to my Blog!</h5>
+    <!-- welcome card -->
+    <div class="flex justify-center py-20">
+        <div class="py-10 px-20 border rounded-lg shadow bg-rose-50">
+            <h5 class="mb-5 text-5xl font-bold tracking-tight text-black">Welcome!</h5>
             <a href="/post"
-                class="bg-transparent hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent rounded">
-                Click Here for the Homepage
+                class="inline-flex items-center px-3 py-2  text-center bg-rose-700 text-white font-semibold rounded-lg hover:text-rose-700 hover:bg-white">
+                Go to Your Blog
+                <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 5h12m0 0L9 1m4 4L9 9" />
+                </svg>
             </a>
         </div>
     </div>

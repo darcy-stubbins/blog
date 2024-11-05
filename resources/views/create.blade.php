@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Create</title>
+    <title>Add a Post</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -19,13 +19,34 @@
     <!-- include the navbar partial  -->
     @include('partials/navbar')
 
+    <!-- WYSIWYG form -->
+    <script src="https://cdn.tiny.cloud/1/{{ env('API_KEY') }}/tinymce/7/tinymce.min.js"
+        referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: '#mytextarea'
+        });
+    </script>
+
 </head>
 
 <body>
     @yield('navbar')
-    <div class="m-20">
-        Add a new Blog Post here
+
+    <div class="w-screen flex justify-center p-10">
+        <div class="w-full p-10 border rounded-lg shadow bg-rose-50">
+            <div>
+                <textarea id="mytextarea"></textarea>
+                <div class="flex justify-center pt-3">
+                    <a href="#"
+                        class="inline-flex items-center px-3 py-2  text-center bg-rose-700 text-white font-semibold rounded-lg hover:text-rose-700 hover:bg-white">
+                        Upload
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
+
 </body>
 
 </html>

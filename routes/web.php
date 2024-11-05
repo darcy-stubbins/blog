@@ -11,13 +11,9 @@ use Illuminate\Support\Facades\Route;
  * ...
  **/
 
-//default view 
+//default 
 Route::get('/', function () {
     return view('welcome');
 });
 
-//index function (home view)
 Route::resource('post', PostController::class);
-
-//create function (create view)
-Route::resource('create', PostController::class);

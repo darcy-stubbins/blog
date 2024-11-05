@@ -23,8 +23,22 @@
 
 <body>
     @yield('navbar')
-    <div class="m-20">
-        This is the Homepage
+    <div class="m-10">
+        <div class="grid grid-cols-2 gap-4">
+
+
+            <div class="col-start-1 p-10 border rounded-lg shadow bg-rose-50">
+                hello
+            </div>
+
+
+            <div class="col-start-2 p-10 border rounded-lg shadow bg-rose-50">
+                hello
+            </div>
+
+
+
+        </div>
     </div>
 </body>
 
