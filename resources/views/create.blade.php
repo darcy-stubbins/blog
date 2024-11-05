@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>Create</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -16,17 +16,15 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     @endif
 
+    <!-- include the navbar partial  -->
+    @include('partials/navbar')
+
 </head>
 
 <body>
+    @yield('navbar')
     <div class="m-20">
-        <div>
-            <h5 class="mb-10 text-2xl font-bold text-black">Welcome to my Blog!</h5>
-            <a href="/post"
-                class="bg-transparent hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent rounded">
-                Click Here for the Homepage
-            </a>
-        </div>
+        Add a new Blog Post here
     </div>
 </body>
 
