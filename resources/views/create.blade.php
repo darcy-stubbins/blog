@@ -32,21 +32,22 @@
 
 <body>
     @yield('navbar')
-
-    <div class="w-screen flex justify-center p-10">
-        <div class="w-full p-10 border rounded-lg shadow bg-rose-50">
-            <div>
-                <textarea id="mytextarea"></textarea>
-                <div class="flex justify-center pt-3">
-                    <a href="#"
-                        class="inline-flex items-center px-3 py-2  text-center bg-rose-700 text-white font-semibold rounded-lg hover:text-rose-700 hover:bg-white">
-                        Upload
-                    </a>
+    <form action="/post" method="POST">
+        @csrf
+        <div class="w-screen flex justify-center p-10">
+            <div class="w-full p-10 border rounded-lg shadow bg-rose-50">
+                <div>
+                    <textarea id="mytextarea" name="blog_content"></textarea>
+                    <div class="flex justify-center pt-3">
+                        <button type="submit"
+                            class="inline-flex items-center px-3 py-2  text-center bg-rose-700 text-white font-semibold rounded-lg hover:text-rose-700 hover:bg-white">
+                            Upload
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
+    </form>
 </body>
 
 </html>

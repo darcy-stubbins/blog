@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -27,7 +28,10 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Post::create(['blog_content' => $request->input('blog_content')]);
+        return redirect('/post/create');
+
+        // dd($request->input('blog_content'));
     }
 
     /**
