@@ -41,9 +41,14 @@
             <!-- card -->
             <div class="border rounded-lg shadow bg-rose-50 p-10 w-full mx-5 mb-10">
                 <!-- title input  -->
-                <div class="flex justify-center mb-5">
+                <div class="mb-5">
                     <input class="w-96 shadow border rounded-lg py-2 px-3  text-gray-700 focus:outline-none"
                         name="blog_title" placeholder="Title">
+                </div>
+                <!-- author input  -->
+                <div class="mb-5">
+                    <input class="w-96 shadow border rounded-lg py-2 px-3  text-gray-700 focus:outline-none"
+                        name="blog_author" placeholder="Author">
                 </div>
                 <!-- WYSIWYG input -->
                 <textarea id="mytextarea" name="blog_content"></textarea>

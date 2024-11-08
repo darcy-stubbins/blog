@@ -30,8 +30,9 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $post = new Post();
-        $post->blog_content = $request->input('blog_content');
         $post->blog_title = $request->input('blog_title');
+        $post->blog_author = $request->input('blog_author');
+        $post->blog_content = $request->input('blog_content');
         $post->save();
         return redirect('/post/create');
 
