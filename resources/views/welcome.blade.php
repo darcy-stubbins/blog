@@ -24,7 +24,7 @@
         <div class="py-10 px-20 border rounded-lg shadow bg-rose-50">
             <h5 class="mb-5 text-5xl font-bold tracking-tight text-black">Welcome!</h5>
             <a href="/post"
-                class="inline-flex items-center px-3 py-2  text-center bg-rose-700 text-white font-semibold rounded-lg hover:text-rose-700 hover:bg-white">
+                class="inline-flex items-center px-3 py-2 text-center bg-rose-700 text-white font-semibold rounded-lg hover:text-rose-700 hover:bg-white">
                 Go to Your Blog
                 <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                     fill="none" viewBox="0 0 14 10">

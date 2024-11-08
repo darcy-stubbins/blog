@@ -24,7 +24,9 @@
         referrerpolicy="origin"></script>
     <script>
         tinymce.init({
-            selector: '#mytextarea'
+            selector: '#mytextarea',
+            theme_advanced_resizing: true,
+            theme_advanced_resizing_use_cookie: false,
         });
     </script>
 
@@ -32,18 +34,29 @@
 
 <body>
     @yield('navbar')
+    <h1 class="py-10 text-center text-4xl pb-10 font-serif font-bold text-black">Upload</h1>
     <form action="/post" method="POST">
         @csrf
-        <div class="w-screen flex justify-center p-10">
-            <div class="w-full p-10 border rounded-lg shadow bg-rose-50">
-                <div>
-                    <textarea id="mytextarea" name="blog_content"></textarea>
-                    <div class="flex justify-center pt-3">
-                        <button type="submit"
-                            class="inline-flex items-center px-3 py-2  text-center bg-rose-700 text-white font-semibold rounded-lg hover:text-rose-700 hover:bg-white">
-                            Upload
-                        </button>
-                    </div>
+        <div class="flex justify-center">
+            <!-- card -->
+            <div class="border rounded-lg shadow bg-rose-50 p-10 w-full mx-5 mb-10">
+                <!-- title input  -->
+                <div class="flex justify-center mb-5">
+                    <input class="w-96 shadow border rounded-lg py-2 px-3  text-gray-700 focus:outline-none"
+                        name="blog_title" placeholder="Title">
+                </div>
+                <!-- WYSIWYG input -->
+                <textarea id="mytextarea" name="blog_content"></textarea>
+                <!-- submit button  -->
+                <div class="flex justify-center pt-3">
+                    <button type="submit"
+                        class="inline-flex items-center px-3 py-2 text-center bg-rose-600 hover:bg-rose-700 text-white rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                            stroke="currentColor" class="size-7">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5m-13.5-9L12 3m0 0 4.5 4.5M12 3v13.5" />
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>

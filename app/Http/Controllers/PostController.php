@@ -29,7 +29,10 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        Post::create(['blog_content' => $request->input('blog_content')]);
+        $post = new Post();
+        $post->blog_content = $request->input('blog_content');
+        $post->blog_title = $request->input('blog_title');
+        $post->save();
         return redirect('/post/create');
 
         // dd($request->input('blog_content'));
