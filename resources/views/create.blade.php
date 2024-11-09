@@ -45,11 +45,6 @@
                     <input class="w-96 shadow border rounded-lg py-2 px-3  text-gray-700 focus:outline-none"
                         name="blog_title" placeholder="Title">
                 </div>
-                <!-- author input  -->
-                <div class="flex justify-center mb-5">
-                    <input class="w-96 shadow border rounded-lg py-2 px-3  text-gray-700 focus:outline-none"
-                        name="blog_author" placeholder="Author">
-                </div>
                 <!-- WYSIWYG input -->
                 <textarea id="mytextarea" name="blog_content"></textarea>
                 <!-- submit button  -->

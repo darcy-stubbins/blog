@@ -41,7 +41,7 @@
                         {!! $post->blog_content !!}
                     </div>
                     <div class="col-start-1 col-span-2 font-bold">
-                        Posted By: {{ $post->blog_author }}
+                        Posted By: {{ $post->user->name }}
                     </div>
                     <!-- 'open' button -->
                     <div class="col-start-3 col-span-1 flex justify-end">
@@ -63,7 +63,7 @@
                     <div class="p-5 border rounded-lg shadow bg-rose-50 m-10">
                         <div class="text-4xl font-bold text-rose-600">{{ $post->blog_title }}</div>
                         <div class="text-lg font-semibold text-black">
-                            Posted By: {{ $post->blog_author }}
+                            Posted By: {{ $post->user->name }}
                         </div>
                         <p>{!! $post->blog_content !!}</p>
                         <!-- 'close' button -->

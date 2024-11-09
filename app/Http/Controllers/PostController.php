@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
@@ -29,10 +30,13 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+        $user = Auth::user();
+
         $post = new Post();
         $post->blog_title = $request->input('blog_title');
-        $post->blog_author = $request->input('blog_author');
+        $post->user_id = $user->id;
         $post->blog_content = $request->input('blog_content');
+
         $post->save();
         return redirect('/post/create');
 
