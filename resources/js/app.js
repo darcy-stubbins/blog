@@ -1,28 +1,7 @@
 import './bootstrap';
 
-var elements = document.getElementsByClassName("read-more-button");
+import Alpine from 'alpinejs';
 
-var smelements = document.getElementsByClassName("close-button");
+window.Alpine = Alpine;
 
-
-//add event listener to each post 
-for (var i = 0; i < elements.length; i++) {
-    elements[i].addEventListener('click', (e) => openModal(e));
-}
-
-//add event listener to each button 
-for (var i = 0; i < smelements.length; i++) {
-    smelements[i].addEventListener('click', (e) => closeModal(e));
-}
-
-function openModal(e) {
-    var modalId = e.target.getAttribute('data-target');
-    document.getElementById(modalId).style.display = 'block';
-}
-
-function closeModal(e) {
-    var modalId = e.target.getAttribute('data-target');
-    document.getElementById(modalId).style.display = 'none';
-}
-
-
+Alpine.start();

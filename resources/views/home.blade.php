@@ -30,7 +30,7 @@
             <!-- card displaying  -->
             @foreach ($posts as $post)
                 <div class="flex grid grid-cols-3 gap-2 items-center p-5 border rounded-lg shadow bg-rose-50">
-                    <!-- hidden div -->
+                    <!-- hidden post modal -->
                     <div id="postBody{{ $post->id }}" class="hidden">
                         {!! $post->blog_content !!}
                     </div>
@@ -40,7 +40,7 @@
                     <div class="col-start-1 col-span-2">
                         {!! $post->blog_content !!}
                     </div>
-                    <div class="col-start-1 col-span-1 font-bold">
+                    <div class="col-start-1 col-span-2 font-bold">
                         Posted By: {{ $post->blog_author }}
                     </div>
                     <!-- 'open' button -->
