@@ -27,7 +27,7 @@
             <!-- profile -->
             <div class="relative inline-block text-left dropdown">
                 <button
-                    class="transition duration-150 ease-in-out text-4xl {{ Route::current()->getName() == '' ? 'text-rose-600' : 'text-white' }} hover:text-rose-500 p-5"
+                    class="transition duration-150 ease-in-out text-4xl {{ Route::current()->getName() == 'profile.edit' ? 'text-rose-600' : 'text-white' }} hover:text-rose-500 p-5"
                     type="button" aria-haspopup="true" aria-expanded="true" aria-controls="headlessui-menu-items-117">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-10">
                         <path fill-rule="evenodd"

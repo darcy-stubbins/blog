@@ -53,15 +53,14 @@
                     Or register here
                 </a>
             </div>
-            <div class="flex items-center justify-end">
+            <div class="flex items-center justify-end gap-5">
                 @if (Route::has('password.request'))
-                    <a class="mr-5 underline text-sm text-gray-600 hover:text-gray-900"
-                        href="{{ route('password.request') }}">
+                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
                         {{ __('Forgot your password?') }}
                     </a>
                 @endif
                 <!-- Log in button  -->
-                <button class="inline-flex px-3 py-2 text-center bg-rose-600 hover:bg-rose-700 text-white rounded-lg">
+                <button class="px-3 py-2 text-center bg-rose-600 hover:bg-rose-700 text-white rounded-lg">
                     {{ __('Log in') }}
                 </button>
             </div>
