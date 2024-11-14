@@ -29,27 +29,29 @@
             theme_advanced_resizing_use_cookie: false,
         });
     </script>
-
 </head>
 
 <body>
     @yield('navbar')
-    <h1 class="py-10 text-center text-4xl pb-10 font-serif font-bold text-black">Upload</h1>
+    <!-- headers -->
+    <h1 class="py-10 text-center text-4xl pb-10 font-bold text-black">Upload</h1>
     <form action="/post" method="POST">
         @csrf
+
         <div class="flex justify-center">
-            <!-- card -->
-            <div class="border rounded-lg shadow bg-rose-50 p-10 w-full mx-5 mb-10">
+            <div class="border rounded-lg shadow bg-rose-50 mx-10 px-5 py-5 mb-10 w-full">
                 <!-- title input  -->
                 <div class="flex justify-center mb-5">
                     <input
-                        class="shadow appearance-none border rounded-lg w-96 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        class="shadow appearance-none border rounded-lg w-1/3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         name="blog_title" placeholder="Title">
                 </div>
+
                 <!-- WYSIWYG input -->
                 <textarea id="mytextarea" name="blog_content"></textarea>
+
                 <!-- submit button  -->
-                <div class="flex justify-center pt-3">
+                <div class="flex justify-center pt-5">
                     <button type="submit"
                         class="inline-flex items-center px-3 py-2 text-center bg-rose-600 hover:bg-rose-700 text-white rounded-lg">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"

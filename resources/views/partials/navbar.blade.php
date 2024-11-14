@@ -43,7 +43,7 @@
                             <div class="text-sm">Signed in as {{ Auth::user()->name }}</div>
                         </div>
                         <div class="py-1">
-                            <!-- go to profile -->
+                            <!-- go to settings -->
                             <a href="/profile"
                                 class="text-gray-700 flex justify-between w-full px-4 py-2 text-sm text-left"
                                 role="menuitem">Settings</a>
