@@ -46,7 +46,7 @@
                             <!-- go to profile -->
                             <a href="/profile"
                                 class="text-gray-700 flex justify-between w-full px-4 py-2 text-sm text-left"
-                                role="menuitem">Go to Profile</a>
+                                role="menuitem">Settings</a>
                             <!-- log out -->
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf

@@ -42,7 +42,8 @@
             <div class="border rounded-lg shadow bg-rose-50 p-10 w-full mx-5 mb-10">
                 <!-- title input  -->
                 <div class="flex justify-center mb-5">
-                    <input class="w-96 shadow border rounded-lg py-2 px-3  text-gray-700 focus:outline-none"
+                    <input
+                        class="shadow appearance-none border rounded-lg w-96 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         name="blog_title" placeholder="Title">
                 </div>
                 <!-- WYSIWYG input -->

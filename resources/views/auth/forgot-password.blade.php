@@ -32,6 +32,7 @@
                 </a>
             </div>
 
+            <!-- headers -->
             <div class="flex justify-center pb-5">
                 <h1 class="font-bold text-3xl">
                     Password recovery
@@ -51,12 +52,13 @@
                 <!-- Email Address -->
                 <div class="pb-5">
                     <x-text-input id="email"
-                        class="peer py-3 pe-0 block w-full bg-transparent border-t-transparent border-b-2 border-x-transparent border-b-gray-200 text-sm focus:border-t-transparent focus:border-x-transparent focus:border-b-blue-500 focus:ring-0 disabled:opacity-50 disabled:pointer-events-none"
+                        class="peer py-3 pe-0 block w-full bg-transparent border-t-transparent border-b-2 border-x-transparent border-b-gray-300 text-sm focus:border-t-transparent focus:border-x-transparent focus:border-b-blue-500 focus:ring-0 disabled:opacity-50 disabled:pointer-events-none"
                         placeholder="Account email" type="email" name="email" :value="old('email')" required
                         autofocus />
                     <x-input-error :messages="$errors->get('email')" class="mt-2" />
                 </div>
 
+                <!-- email reset link -->
                 <div class="flex items-center justify-center mt-4">
                     <button class="px-3 py-2 text-center bg-rose-600 hover:bg-rose-700 text-white rounded-full">
                         Email Password Reset Link

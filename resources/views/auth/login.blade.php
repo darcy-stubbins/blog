@@ -34,7 +34,7 @@
                         <div class="relative">
                             <!-- Email Address -->
                             <x-text-input id="email"
-                                class="peer py-3 pe-0 ps-8 block w-full bg-transparent border-t-transparent border-b-2 border-x-transparent border-b-gray-200 text-sm focus:border-t-transparent focus:border-x-transparent focus:border-b-blue-500 focus:ring-0 disabled:opacity-50 disabled:pointer-events-none"
+                                class="peer py-3 pe-0 ps-8 block w-full bg-transparent border-t-transparent border-b-2 border-x-transparent border-b-gray-300 text-sm focus:border-t-transparent focus:border-x-transparent focus:border-b-blue-500 focus:ring-0 disabled:opacity-50 disabled:pointer-events-none"
                                 type="email" name="email" placeholder="Enter email" :value="old('email')" required
                                 autofocus autocomplete="username" />
                             <x-input-error :messages="$errors->get('email')" class="mt-2" />
@@ -52,7 +52,7 @@
                         <!-- Password -->
                         <div class="relative">
                             <x-text-input id="password"
-                                class="peer py-3 pe-0 ps-8 block w-full bg-transparent border-t-transparent border-b-2 border-x-transparent border-b-gray-200 text-sm focus:border-t-transparent focus:border-x-transparent focus:border-b-blue-500 focus:ring-0 disabled:opacity-50 disabled:pointer-events-none"
+                                class="peer py-3 pe-0 ps-8 block w-full bg-transparent border-t-transparent border-b-2 border-x-transparent border-b-gray-300 text-sm focus:border-t-transparent focus:border-x-transparent focus:border-b-blue-500 focus:ring-0 disabled:opacity-50 disabled:pointer-events-none"
                                 placeholder="Enter password" type="password" name="password" required
                                 autocomplete="current-password" />
                             <x-input-error :messages="$errors->get('password')" class="mt-2" />

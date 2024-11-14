@@ -32,7 +32,7 @@
                 <!-- Name -->
                 <div class="">
                     <x-text-input id="name"
-                        class="peer py-3 pe-0 block w-full bg-transparent border-t-transparent border-b-2 border-x-transparent border-b-gray-200 text-sm focus:border-t-transparent focus:border-x-transparent focus:border-b-blue-500 focus:ring-0 disabled:opacity-50 disabled:pointer-events-none"
+                        class="peer py-3 pe-0 block w-full bg-transparent border-t-transparent border-b-2 border-x-transparent border-b-gray-300 text-sm focus:border-t-transparent focus:border-x-transparent focus:border-b-blue-500 focus:ring-0 disabled:opacity-50 disabled:pointer-events-none"
                         placeholder="Name" type="text" name="name" :value="old('name')" required autofocus
                         autocomplete="name" />
                     <x-input-error :messages="$errors->get('name')" class="mt-2" />
@@ -41,7 +41,7 @@
                 <!-- Email Address -->
                 <div class="">
                     <x-text-input id="email"
-                        class="peer py-3 pe-0 block w-full bg-transparent border-t-transparent border-b-2 border-x-transparent border-b-gray-200 text-sm focus:border-t-transparent focus:border-x-transparent focus:border-b-blue-500 focus:ring-0 disabled:opacity-50 disabled:pointer-events-none"
+                        class="peer py-3 pe-0 block w-full bg-transparent border-t-transparent border-b-2 border-x-transparent border-b-gray-300 text-sm focus:border-t-transparent focus:border-x-transparent focus:border-b-blue-500 focus:ring-0 disabled:opacity-50 disabled:pointer-events-none"
                         placeholder="Email" type="email" name="email" :value="old('email')" required
                         autocomplete="username" />
                     <x-input-error :messages="$errors->get('email')" class="mt-2" />
@@ -50,7 +50,7 @@
                 <!-- Password -->
                 <div class="">
                     <x-text-input id="password"
-                        class="peer py-3 pe-0 block w-full bg-transparent border-t-transparent border-b-2 border-x-transparent border-b-gray-200 text-sm focus:border-t-transparent focus:border-x-transparent focus:border-b-blue-500 focus:ring-0 disabled:opacity-50 disabled:pointer-events-none"
+                        class="peer py-3 pe-0 block w-full bg-transparent border-t-transparent border-b-2 border-x-transparent border-b-gray-300 text-sm focus:border-t-transparent focus:border-x-transparent focus:border-b-blue-500 focus:ring-0 disabled:opacity-50 disabled:pointer-events-none"
                         placeholder="Password" type="password" name="password" required autocomplete="new-password" />
                     <x-input-error :messages="$errors->get('password')" class="mt-2" />
                 </div>
@@ -58,7 +58,7 @@
                 <!-- Confirm Password -->
                 <div class="">
                     <x-text-input id="password_confirmation"
-                        class="peer py-3 pe-0 block w-full bg-transparent border-t-transparent border-b-2 border-x-transparent border-b-gray-200 text-sm focus:border-t-transparent focus:border-x-transparent focus:border-b-blue-500 focus:ring-0 disabled:opacity-50 disabled:pointer-events-none"
+                        class="peer py-3 pe-0 block w-full bg-transparent border-t-transparent border-b-2 border-x-transparent border-b-gray-300 text-sm focus:border-t-transparent focus:border-x-transparent focus:border-b-blue-500 focus:ring-0 disabled:opacity-50 disabled:pointer-events-none"
                         placeholder="Confirm Password" type="password" name="password_confirmation" required
                         autocomplete="new-password" />
                     <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
