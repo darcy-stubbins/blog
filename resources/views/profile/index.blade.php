@@ -1,0 +1,1 @@
+<!-- where the user can see all their posts and shit  -->

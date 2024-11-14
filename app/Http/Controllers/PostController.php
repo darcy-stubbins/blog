@@ -14,7 +14,7 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::all();
-        return view('home')->with(['posts' => $posts]);
+        return view('post/index')->with(['posts' => $posts]);
     }
 
     /**
@@ -22,7 +22,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('create');
+        return view('post/create');
     }
 
     /**

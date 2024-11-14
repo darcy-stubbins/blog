@@ -24,10 +24,13 @@
 <body>
     @yield('navbar')
 
+    <!-- headers -->
+    <h1 class="text-center text-4xl  font-bold text-black m-10">
+        Edit
+    </h1>
+
+    <!-- using the 3 partials profile/partials  -->
     <div class="border rounded-lg shadow bg-rose-50 m-10">
-
-
-
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6">
                 <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
