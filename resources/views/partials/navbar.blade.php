@@ -12,7 +12,7 @@
                         d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
                 </svg>
             </a>
-            <!-- add -->
+            <!-- create -->
             <a href="/post/create"
                 class="text-4xl {{ Route::current()->getName() == 'post.create' ? 'text-rose-600' : 'text-white' }} hover:text-rose-500 p-5"><svg
                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-10">
@@ -27,7 +27,7 @@
             <!-- profile -->
             <div class="relative inline-block text-left dropdown">
                 <button
-                    class="transition duration-150 ease-in-out text-4xl {{ Route::current()->getName() == 'profile.edit' ? 'text-rose-600' : 'text-white' }} hover:text-rose-500 p-5"
+                    class="transition duration-150 ease-in-out text-4xl {{ Route::current()->getName() == 'profile.edit' || Route::current()->getName() == 'profile.show' ? 'text-rose-600' : 'text-white' }} hover:text-rose-500 p-5"
                     type="button" aria-haspopup="true" aria-expanded="true" aria-controls="headlessui-menu-items-117">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-10">
                         <path fill-rule="evenodd"
@@ -43,8 +43,12 @@
                             <div class="text-sm">Signed in as {{ Auth::user()->name }}</div>
                         </div>
                         <div class="py-1">
-                            <!-- go to settings -->
-                            <a href="/profile"
+                            <!-- Profile -->
+                            <a href="{{ route('profile.show') }}"
+                                class="text-gray-700 flex justify-between w-full px-4 py-2 text-sm text-left"
+                                role="menuitem">Profile</a>
+                            <!--Settings -->
+                            <a href="{{ route('profile.edit') }}"
                                 class="text-gray-700 flex justify-between w-full px-4 py-2 text-sm text-left"
                                 role="menuitem">Settings</a>
                             <!-- log out -->
@@ -52,7 +56,7 @@
                                 @csrf
                                 <a class="text-gray-700 flex justify-between w-full px-4 py-2 text-sm text-left"
                                     href="route('logout')" onclick="event.preventDefault();
-                                                                            this.closest('form').submit();">
+                                    this.closest('form').submit();">
                                     {{ __('Log Out') }}
                                 </a>
                             </form>
