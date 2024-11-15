@@ -15,6 +15,7 @@ return new class extends Migration {
             $table->text('blog_title');
             $table->unsignedInteger('user_id');
             $table->text('blog_content');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
@@ -26,4 +27,6 @@ return new class extends Migration {
     {
         Schema::dropIfExists('posts');
     }
+
+
 };

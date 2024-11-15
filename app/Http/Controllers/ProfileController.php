@@ -44,9 +44,9 @@ class ProfileController extends Controller
     public function show()
     {
         $user = Auth::user();
-        $userPosts = $user->posts;
+        $posts = $user->posts;
 
-        return view('profile.show')->with(['userPosts' => $userPosts]);
+        return view('profile.show')->with(['posts' => $posts]);
     }
 
     /**

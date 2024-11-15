@@ -72,6 +72,13 @@ class PostController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $user = Auth::user()->id;
+        $post = Post::find($id);
+
+        if ($user == $post->user->id) {
+            $post->delete();
+        }
+
+        return redirect('/profile');
     }
 }
