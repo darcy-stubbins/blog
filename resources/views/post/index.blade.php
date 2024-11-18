@@ -30,6 +30,13 @@
             Posts
         </h1>
 
+        <!-- if there are no posts -->
+        @if ($posts->isEmpty())
+            <h3 class="text-2xl text-center">
+                Sorry there are currently no posts!
+            </h3>
+        @endif
+
         <!-- card displaying  -->
         <div class="grid grid-cols-3 gap-4">
             @foreach ($posts as $post)
@@ -90,7 +97,7 @@
                         <p>{!! $post->blog_content !!}</p>
 
                         <!-- 'close' button -->
-                        <div class="flex justify-center">
+                        <div class="flex justify-center py-3">
                             <button data-target="modalPost{{ $post->id }}"
                                 class="close-button inline-flex self-end items-center bg-rose-600 hover:bg-rose-700 text-white font-bold py-2 px-4 rounded-full max-h-8">
                                 Close

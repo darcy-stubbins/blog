@@ -14,7 +14,7 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::all();
-        return view('post/index')->with(['posts' => $posts]);
+        return view('post.index')->with(['posts' => $posts]);
     }
 
     /**
@@ -22,7 +22,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('post/create');
+        return view('post.create');
     }
 
     /**
@@ -38,9 +38,7 @@ class PostController extends Controller
         $post->blog_content = $request->input('blog_content');
 
         $post->save();
-        return redirect('/post/create');
-
-        // dd($request->input('blog_content'));
+        return redirect('post.create');
     }
 
     /**
@@ -56,7 +54,8 @@ class PostController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $post = Post::find($id);
+        return view('post.edit')->with(['post' => $post]);
     }
 
     /**
@@ -64,7 +63,12 @@ class PostController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $post = Post::find($id);
+        $post->blog_title = $request->input('blog_title');
+        $post->blog_content = $request->input('blog_content');
+
+        $post->save();
+        return redirect('profile');
     }
 
     /**

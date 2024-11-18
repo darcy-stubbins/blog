@@ -30,7 +30,14 @@
         <!-- Hello {{ Auth::user()->name }} -->
     </h1>
 
+    <!-- if the user has created no posts to be shown -->
+    @if ($posts->isEmpty())
+        <h3 class="text-2xl text-center">
+            Sorry there are currently no posts!
+        </h3>
+    @endif
 
+    <!-- post displaying -->
     @foreach ($posts as $post)
         <div class="flex justify-center m-10">
             <div class="border rounded-lg shadow bg-rose-50 p-5 overflow-hidden w-full">
@@ -43,9 +50,9 @@
 
                     <p>{!! $post->blog_content !!}</p>
                 </div>
-                <!-- delete button  -->
-                <div class="flex justify-end px-5">
 
+                <div class="flex gap-3 justify-end px-5">
+                    <!-- delete button  -->
                     <form action="/post/{{ $post->id }}" method="POST">
                         @csrf
                         @method('delete')
@@ -58,6 +65,15 @@
                             </svg>
                         </button>
                     </form>
+
+                    <!-- edit button  -->
+                    <a href="/post/{{ $post->id }}/edit">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-7">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125" />
+                        </svg>
+                    </a>
                 </div>
             </div>
         </div>
