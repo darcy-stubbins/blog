@@ -54,25 +54,14 @@
                 <textarea id="mytextarea" name="blog_content">{!! $post->blog_content !!}</textarea>
 
                 <div class="flex justify-center pt-5">
-
-
-
-
-                    <!-- confirm changes button  -->
-
                     @csrf
                     @method('patch')
 
+                    <!-- confirm changes button  -->
                     <button type="submit"
                         class="inline-flex items-center px-3 py-2 text-center bg-rose-600 hover:bg-rose-700 text-white rounded-lg">
                         Save Changes
                     </button>
-
-
-
-
-
-
                 </div>
             </div>
         </div>

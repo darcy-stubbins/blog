@@ -44,7 +44,7 @@
                         </div>
                         <div class="py-1">
                             <!-- Profile -->
-                            <a href="{{ route('profile.show') }}"
+                            <a href="{{ route('profile.showLoggedInUser') }}"
                                 class="text-gray-700 flex justify-between w-full px-4 py-2 text-sm text-left"
                                 role="menuitem">Profile</a>
                             <!--Settings -->

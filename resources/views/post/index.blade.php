@@ -54,8 +54,7 @@
 
                         <p class="mt-1 text-sm text-gray-700">
                             Posted by:
-                            <!-- to do: make this tke the user to the authors profile section or error if user no longer exists  -->
-                            <a href="#" class="text-blue-700 underline">
+                            <a href="/profile/{{ $post->user->id }}" class="text-blue-700 underline">
                                 {{ $post->user->name ?? 'Cant Find Author' }}
                             </a>
                         </p>
@@ -86,8 +85,7 @@
 
                         <h3 class="mt-1 text-gray-700">
                             Posted by:
-                            <!-- to do: make this tke the user to the authors profile section or error if user no longer exists  -->
-                            <a href="#" class="text-blue-700 underline">
+                            <a href="/profile/{{ $post->user->id }}" class="text-blue-700 underline">
                                 {{ $post->user->name ?? 'Cant Find Author' }}
                             </a>
                         </h3>

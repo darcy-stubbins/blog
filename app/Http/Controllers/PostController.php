@@ -38,7 +38,7 @@ class PostController extends Controller
         $post->blog_content = $request->input('blog_content');
 
         $post->save();
-        return redirect('post.create');
+        return redirect('post/create');
     }
 
     /**

@@ -39,11 +39,23 @@ class ProfileController extends Controller
     }
 
     /**
-     * Show a specific user 
+     * Show the logged in users posts  
      */
-    public function show()
+    public function showLoggedInUser()
     {
         $user = Auth::user();
+
+        $posts = $user->posts;
+
+        return view('profile.showLoggedInUser')->with(['posts' => $posts]);
+    }
+
+    /**
+     * Show a specific user 
+     */
+    public function show(string $id)
+    {
+        $user = User::where('id', $id)->withTrashed()->first();
         $posts = $user->posts;
 
         return view('profile.show')->with(['posts' => $posts]);
