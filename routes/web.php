@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LikeController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -20,5 +21,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'showLoggedInUser'])->name('profile.showLoggedInUser');
     Route::get('/profile/{id}', [ProfileController::class, 'show'])->name('profile.show');
 });
+
+//LikeController routes 
+Route::resource('like', LikeController::class)->middleware(['auth', 'verified']);
 
 require __DIR__ . '/auth.php';

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Like;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -13,8 +14,10 @@ class PostController extends Controller
      */
     public function index()
     {
+        $user = Auth::user();
         $posts = Post::all();
-        return view('post.index')->with(['posts' => $posts]);
+        $likedPosts = Like::where('user_id', $user->id)->pluck('post_id');
+        return view('post.index')->with(['posts' => $posts, 'likedPosts' => $likedPosts]);
     }
 
     /**
