@@ -125,12 +125,19 @@
 
                         <hr class="h-px my-6 bg-gray-300 border-0">
 
-                        <div class="flex justify-center">
+                        <div class="flex justify-center mt-10">
                             <p>{!! $post->blog_content !!}</p>
                         </div>
 
+                        <!-- comment section  -->
+                        <div class="flex justify-center mt-10 mx-20">
+                            <textarea id="message" rows="4"
+                                class="w-full shadow appearance-none border rounded-lg w-1/3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                placeholder="Write a comment here"></textarea>
+                        </div>
+
                         <!-- 'close' button -->
-                        <div class="flex justify-center py-3 pt-10">
+                        <div class="flex justify-center py-3 pt-5">
                             <button data-target="modalPost{{ $post->id }}"
                                 class="close-button inline-flex self-end items-center bg-rose-600 hover:bg-rose-700 text-white font-bold py-2 px-4 rounded-full max-h-8">
                                 Close

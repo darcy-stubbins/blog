@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ProfileUpdateRequest;
+use App\Models\Like;
 use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -44,8 +45,7 @@ class ProfileController extends Controller
     public function showLoggedInUser()
     {
         $user = Auth::user();
-
-        $posts = $user->posts;
+        $posts = $user->posts()->with('likes')->get();
 
         return view('profile.showLoggedInUser')->with(['posts' => $posts]);
     }
