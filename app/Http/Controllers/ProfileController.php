@@ -56,7 +56,7 @@ class ProfileController extends Controller
     public function show(string $id)
     {
         $user = User::where('id', $id)->withTrashed()->first();
-        $posts = $user->posts;
+        $posts = $user->posts()->with('likes')->get();
 
         return view('profile.show')->with(['posts' => $posts]);
     }

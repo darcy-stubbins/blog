@@ -41,6 +41,10 @@
                     <hr class="h-px my-6 bg-gray-300 border-0">
 
                     <p>{!! $post->blog_content !!}</p>
+
+                    <h1 class="font-bold text-start">
+                        Likes: {{ $post->likes->count() }}
+                    </h1>
                 </div>
             </div>
         </div>

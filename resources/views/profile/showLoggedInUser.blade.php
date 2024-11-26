@@ -51,8 +51,6 @@
                     <p>{!! $post->blog_content !!}</p>
                 </div>
 
-
-
                 <div class="flex grid grid-cols-2 gap-3 px-5">
                     <!-- displaying the likes -->
                     <div class="flex col-start-1">
