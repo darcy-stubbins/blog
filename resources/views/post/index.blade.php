@@ -103,7 +103,7 @@
                                 @endif
 
                                 <input type="hidden" name="post_id" value="{{ $post->id }}">
-                                <div class="flex col-start-2 justify-end m-auto items-center pr-5 pt-5">
+                                <div class="flex col-start-2 justify-end m-auto items-center pr-5 pt-5 gap-1">
                                     <button>
                                         @if ($likedPosts->contains($post->id))
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
@@ -119,6 +119,9 @@
                                             </svg>
                                         @endif
                                     </button>
+                                    <h3 class="font-bold text-lg">
+                                        {{ $post->likes->count() }}
+                                    </h3>
                                 </div>
                             </form>
                         </div>

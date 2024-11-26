@@ -15,8 +15,9 @@ class PostController extends Controller
     public function index()
     {
         $user = Auth::user();
-        $posts = Post::all();
+        $posts = $user->posts()->with('likes')->get();
         $likedPosts = Like::where('user_id', $user->id)->pluck('post_id');
+
         return view('post.index')->with(['posts' => $posts, 'likedPosts' => $likedPosts]);
     }
 
