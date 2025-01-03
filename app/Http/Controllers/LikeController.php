@@ -33,7 +33,7 @@ class LikeController extends Controller
     }
 
     /**
-     * Remove a new like on a post 
+     * Remove a like on a post 
      */
     public function destroy(Request $request)
     {

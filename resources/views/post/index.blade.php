@@ -76,7 +76,7 @@
 
                 <!-- modal view  -->
                 <div id="modalPost{{ $post->id }}" style="display: none;"
-                    class="fixed top-0 left-0 bg-black bg-opacity-60 w-full h-full">
+                    class="fixed top-0 left-0 bg-black bg-opacity-60 w-full h-full overflow-auto">
                     <div class="p-5 border rounded-lg shadow bg-rose-50 m-20">
 
                         <div class="grid grid-cols-2 gap-2">
@@ -103,6 +103,7 @@
                                 @endif
 
                                 <input type="hidden" name="post_id" value="{{ $post->id }}">
+
                                 <div class="flex col-start-2 justify-end m-auto items-center pr-5 pt-5 gap-1">
                                     <button>
                                         @if ($likedPosts->contains($post->id))
@@ -132,11 +133,47 @@
                             <p>{!! $post->blog_content !!}</p>
                         </div>
 
-                        <!-- comment section  -->
-                        <div class="flex justify-center mt-10 mx-20">
-                            <textarea id="message" rows="4"
-                                class="w-full shadow appearance-none border rounded-lg w-1/3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                placeholder="Write a comment here"></textarea>
+                        <!-- comment section -->
+                        <div class="border rounded-lg shadow bg-rose-200 p-5 m-10">
+
+                            <form action="/comment" method="POST">
+                                @csrf
+
+                                <input type="hidden" name="post_id" value="{{$post->id}}">
+
+                                <div>
+                                    <textarea required id="message" name="comment_body" rows="3"
+                                        class="w-full shadow appearance-none border rounded-lg w-1/3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                        placeholder="Write a comment here"></textarea>
+                                </div>
+                                <div class="flex justify-center py-3 pt-3">
+                                    <button type="submit"
+                                        class="inline-flex self-end items-center bg-rose-600 hover:bg-rose-700 text-white font-bold py-2 px-4 rounded-full max-h-8">
+                                        Post Comment
+                                    </button>
+                                </div>
+                            </form>
+
+                            <!-- comment displaying -->
+                            <div class="text-center font-bold text-2xl text-gray-900 pt-10">
+                                <h2>Comments</h2>
+                            </div>
+
+                            <!-- if there are no comments -->
+                            @if ($post->comments->isEmpty())
+                                <h1 class="text-center text-gray-800 pt-3">
+                                    Sorry there are currently no comments on this post!
+                                </h1>
+                            @endif
+
+                            @foreach ($post->comments as $comment)
+                                <div class="text-gray-800 font-bold px-3 pt-3">
+                                    {{ $comment->user->name }} left the comment:
+                                </div>
+                                <div class="text-gray-700 px-5 py-2">
+                                    {{ $comment->comment_body }}
+                                </div>
+                            @endforeach
                         </div>
 
                         <!-- 'close' button -->

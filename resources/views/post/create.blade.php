@@ -18,18 +18,6 @@
 
     <!-- include the navbar partial  -->
     @include('partials/navbar')
-
-    <!-- WYSIWYG form -->
-    <script src="https://cdn.tiny.cloud/1/{{ env('API_KEY') }}/tinymce/7/tinymce.min.js"
-        referrerpolicy="origin"></script>
-    <script>
-        tinymce.init({
-            selector: '#mytextarea',
-            theme_advanced_resizing: true,
-            theme_advanced_resizing_use_cookie: false,
-        });
-    </script>
-
 </head>
 
 <body>
@@ -43,13 +31,16 @@
             <div class="border rounded-lg shadow bg-rose-50 mx-10 px-5 py-5 mb-10 w-full">
                 <!-- title input  -->
                 <div class="flex justify-center mb-5">
-                    <input
+                    <input required
                         class="shadow appearance-none border rounded-lg w-1/3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         name="blog_title" placeholder="Title">
                 </div>
 
-                <!-- WYSIWYG input -->
-                <textarea id="mytextarea" name="blog_content"></textarea>
+                <div>
+                    <textarea required name="blog_content" rows="7"
+                        class="w-full shadow appearance-none border rounded-lg w-1/3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        placeholder="Create a post here"></textarea>
+                </div>
 
                 <!-- submit button  -->
                 <div class="flex justify-center pt-5">

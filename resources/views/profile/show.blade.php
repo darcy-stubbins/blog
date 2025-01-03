@@ -26,7 +26,7 @@
 
     <!-- headers -->
     <h1 class="text-center text-4xl font-bold text-black m-10">
-        Posts
+        {{ $user->name }}'s Posts
     </h1>
 
     <!-- post displaying -->

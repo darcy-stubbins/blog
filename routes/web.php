@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\LikeController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
@@ -24,5 +25,8 @@ Route::middleware('auth')->group(function () {
 
 //LikeController routes 
 Route::resource('like', LikeController::class)->middleware(['auth', 'verified']);
+
+//CommentController routes
+Route::resource('comment', CommentController::class)->middleware(['auth', 'verified']);
 
 require __DIR__ . '/auth.php';
